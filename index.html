@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carlos Clinic</title>
+    <!------ Css Homepage ----->
+    <link rel="stylesheet" href="css/style.css">
+    <!------ Icons ------>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- swiper Slide -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!------ Scroll Animation ------>
+     <script src="https://unpkg.com/scrollreveal"></script>
+   
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="logo">
+            <li><a href="index.html"><img src="./img/logo.png" alt="Carlos Clinic Logo"></a></li>
+        </div>
+
+        <div class="links">
+            <ul class="nav">
+                <li  class="active"><a href="#home"><i class='bx bx-home-alt' ></i>Home</a></li>
+                <li><a href="#services"><i class='bx bx-injection' ></i>Services</a></li>
+                <li ><a href="#doctors"><i class='bx bx-user' ></i>Doctors</a></li>
+                <li><a href="#contact-us"><i class='bx bx-phone' ></i>Contact</a></li>
+            </ul>          
+        </div>
+
+        
+        <div class="log">
+                    
+            <!-- <a onclick="showloginoverlay();" class="login" href="#loginform">Login</a> -->
+
+            <div class="logout">
+                    <p>James Delos Santos <br><span> Patient</span></p>                          
+                    <img onclick="homelogout()" src="./img/dog.jpg" alt="User Profile">
+
+                <div  onclick="closehomelogout()" class="esc"> </div>
+                <div class="logout-btn">
+                    <ul>
+                        <li class="myprofilenav">
+                            <a  onclick="showProfile();" href="#my-profile"><i class='bx bx-user' ></i>My Profile</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class='bx bx-log-out' ></i>Log out</a>
+                        </li>   
+                    </ul>
+
+                </div>
+                <div class="notif">
+                    <a  href="#" class="icon">         
+                        <i class='bx bx-bell'></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+    
+    <div id="loginform">
+
+        <div class="form-container">
+           
+            <div class="choices">
+                <a class="navlogin active" href="#loginform">Login</a>  
+                <a class="navsignup" href="#signupform">Signup</a>
+            </div>
+           
+            <form action="#" class="login">
+                <div class="input">
+                    <i class='bx bxs-user'></i>
+                    <input type="text"  placeholder="Enter Username" required>
+                </div>  
+                <div class="input">
+                    <i class='bx bxs-lock-alt' ></i> 
+                    <input  class="allpassInput" type="password" name="password" placeholder="Enter Password" required>
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+<!---------------------SIGN UP FORM ---------------->
+            <form action="#" class="signup">
+
+                <div class="usertype">  
+               
+                    <input type="radio" name="select" id="option-1" checked>
+                     <input type="radio" name="select" id="option-2" >
+                     <input type="radio" name="select" id="option-3" >
+                     
+                     <label for="option-1" class="option option-1">
+                         <span>PATIENT</span>
+                     </label>
+                     <label for="option-2" class="option option-2">
+                          <span>DOCTOR</span>
+                     </label>
+                     <label for="option-3" class="option option-3">
+                         <span>ADMIN</span>
+                    </label>
+     
+                 </div>
+                 
+                <div class="input">
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+
+                <div class="input">
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                
+                <div class="input">
+                    <i class='bx bxs-envelope' ></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+    
+                <div class="input">
+                    <i class='bx bxs-phone'></i>
+                   <input type="tel" id="phone" placeholder="Phone Number" name="phone">
+               </div>
+               
+               <div class="input">
+                    <i class='bx bxs-lock-alt' ></i> 
+                    <input  class="allpassInput" type="password" name="password" placeholder="Enter Password" required>
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+           
+
+                <div class="input admin-code">
+                    <i class='bx bx-lock'></i>
+                    <input  class="allpassInput" id="admin-code" type="password" name="password" placeholder="Admin Code" >
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+                    
+                <button type="submit">Signup as Patient</button>
+            </form>
+           
+        </div>
+
+        <div class="esc">
+
+        </div>
+            
+    </div>
+
+    </header>
+
+    
+        <section id="home"> 
+            <div class="title">
+              <h1>Find a Doctor <br>
+                & Book Online</h1>
+            <div class="text">
+                <p >Lorem ipsum dolor sit amet, consectetur elit amet urna non maximus.</p>
+            </div>
+    
+            </div>
+
+            <a class="book" href="patient-appointment.html">Book Appointment</a>
+            <div class="home_img">
+            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        <image class="home__blob-img" x="50" y="60" href="./img/doc4.png">
+                    </g>
+            </svg>
+           </div>
+           
+        </section>    
+        
+        <section id="services">
+            <div class="title">
+                <h1>Our Services</h1>
+            </div>         
+            <div class="cards">
+                    <div class="card">
+                        <i class='bx bx-home-heart' ></i>
+                        <span>Home Visit</span> 
+                        <p class="description">Description Lorem ipsum dolor sit amet, consectetur elit amet urna non maximus.</p>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-notepad'></i>
+                        <span>Consultation</span>    
+                    </div>
+                    <div class="card">  
+                        <i class='bx bx-chat' ></i>
+                        <span>Health Talks</span>
+                    </div>
+                    <div class="card"> 
+                        <i class='bx bx-check-shield' ></i>
+                        <span>Medical Clearance</span>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-injection'></i>
+                        <span>Vaccination</span>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-cut'></i>
+                        <span>Circumcision</span>
+                    </div>
+                    <div class="card">SEVEN</div>
+                    <div class="card">EIGHT</div>
+                    <div class="card">NINE</div>
+                    <div class="card">TEN</div>
+                    <div class="card">ELEVEN</div>
+                    <div class="card">TWELVE</div>
+                    
+            </div>
+            <button class="more_services">View more</button>
+            <button class="less_services">View less</button>
+        </section>
+
+        <section id="doctors">
+            <div class="title">
+                <h1>Meet Our Team</h1>
+                <p>Choose from our available Doctors and Book your appointment</p>
+            </div>
+            
+            <div class="content">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+    
+                      <div class="swiper-slide">
+                        <div class="doc-image">
+                            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                    <image class="home__blob-img" x="50" y="60" href="./img/doc4.png">
+                                </g>
+                             </svg>
+                        </div>
+                        <p>Dr. Something S. Something</p>
+                        <span>General Medicine</span> 
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="doc-image">
+                            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                    <image class="home__blob-img" x="50" y="60" href="./img/doc3.png">
+                                </g>
+                             </svg>
+                        </div>
+                        <p>Dr. Something S. Something</p>
+                        <span>General Medicine</span> 
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="doc-image">
+                            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                    <image class="home__blob-img" x="50" y="60" href="./img/doc2.png">
+                                </g>
+                             </svg>
+                        </div>
+                        <p>Dr. Something S. Something</p>
+                        <span>General Medicine</span> 
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="doc-image">
+                            <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                                    <image class="home__blob-img" x="50" y="60" href="./img/doc.png">
+                                </g>
+                             </svg>
+                        </div>
+                        <p>Dr. Something S. Something</p>
+                        <span>General Medicine</span> 
+                      </div>
+                      
+                    
+                      
+                    </div>
+            
+                    <div class="swiper-pagination"></div>
+                  </div>
+              
+            </div>
+    
+    
+
+        </section>
+
+        <section id="contact-us">
+            <div class="title">
+                <h1>How to contact us?</h1>
+                <!-- <p>Want to get in touch? We’d Love to hear from you. Here’s how you can reach us...</p> -->
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.085733896897!2d120.80921044573189!3d14.842877979052357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339653af3def12ff%3A0x4ce3736352a7375c!2sSitio%20Carlos%20Commercial%20Complex!5e0!3m2!1sen!2sph!4v1664165524061!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contacts">
+
+                    <div class="info">
+                      <div class="plate">
+                          <i class='bx bx-phone' ></i>
+                      </div>
+      
+                      <h3>CONTACTS</h3>
+                      <a href="tel:09616246807">09616246807</a>
+                   </div>
+                   
+                   <div class="info">
+                      <div class="plate">
+                          <i class='bx bx-location-plus' ></i>
+                      </div>
+      
+                      <h3>LOCATION</h3>
+                      <a href="https://goo.gl/maps/eaLJQkmBP3VyGQNC7">Sitio Carlos Commercial Complex, RRV5+5W2, Malolos, Bulacan</a> 
+                    </div>  
+      
+                    <div class="info">
+                        <div class="plate">
+                            <i class='bx bx-envelope' ></i>
+                        </div>
+      
+                        <h3>Mails</h3>
+                        <a href="mailto:jamesdelossantos223@gmail.com">jamesdelossantos223@gmail.com</a>
+                     
+                    </div>  
+      
+      
+                </div>
+            </div>
+      
+            <div class="socials">
+              <a href="https://www.facebook.com/carloshealthhub"><i class='bx bxl-facebook' ></i></a>
+              <a href="#"> <i class='bx bxl-twitter' ></i></a>
+              <a href="#"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        
+        
+           
+        </section>
+
+   <!-- Swiper Slide -->
+   <script src="js/swiper-bundle.min.js"></script>
+    
+   <script src="js/script.js"></script>
+
+   <script src="js/home.js"></script>
+   
+   <script src="js/login.js"></script>
+        
+   
+</body>
+</html>

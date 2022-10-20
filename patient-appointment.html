@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Clinic | Online Appointment System</title>
+     <!------ Css Homepage ----->
+     <link rel="stylesheet" href="css/style.css">
+     <!------ Css Homepage ----->
+     <link rel="stylesheet" href="css/dashboard.css">
+     <!------ Icons ------>
+     <link
+       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+       rel="stylesheet"
+     />
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="logo">
+            <li><a href="index.html"><img src="./img/logo.png" alt="Carlos Clinic Logo"></a></li>
+        </div>
+
+        <div class="links">
+            <ul class="nav">
+                <li  class="active"><a href="#home"><i class='bx bx-home-alt' ></i>Home</a></li>
+                <li><a href="#services"><i class='bx bx-injection' ></i>Services</a></li>
+                <li ><a href="#doctors"><i class='bx bx-user' ></i>Doctors</a></li>
+                <li><a href="#contact-us"><i class='bx bx-phone' ></i>Contact</a></li>
+            </ul>          
+        </div>
+
+        <div class="log">
+                    
+            <!-- <a class="login" href="#loginform">Login</a> -->
+
+            <div class="logout">
+                <p>James Delos Santos <br><span> Patient</span></p>                          
+                <img onclick="homelogout()" src="./img/dog.jpg" alt="User Profile">
+
+                <div  onclick="closehomelogout()" class="esc"> </div>
+                <div class="logout-btn">
+                    <ul>
+                        <li class="myprofilenav" >
+                            <a onclick="showProfile();" href="#my-profile"><i class='bx bx-user' ></i>My Profile</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class='bx bx-log-out' ></i>Log out</a>
+                        </li>   
+                    </ul>
+
+                </div>
+                <div class="notif">
+                    <a  href="#" class="icon">         
+                        <i class='bx bx-bell'></i>
+                    </a>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    
+    <div id="loginform">
+
+        <div class="form-container">
+           
+            <div class="choices">
+                <a class="navlogin active" href="#loginform">Login</a>  
+                <a class="navsignup" href="#signupform">Signup</a>
+            </div>
+           
+            <form action="#" class="login">
+                <div class="input">
+                    <i class='bx bxs-user'></i>
+                    <input type="text"  placeholder="Enter Username" required>
+                </div>  
+                <div class="input">
+                    <i class='bx bxs-lock-alt' ></i> 
+                    <input  class="allpassInput" type="password" name="password" placeholder="Enter Password" required>
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+<!---------------------SIGN UP FORM ---------------->
+            <form action="#" class="signup">
+
+                <div class="usertype">  
+               
+                    <input type="radio" name="select" id="option-1" checked>
+                     <input type="radio" name="select" id="option-2" >
+                     <input type="radio" name="select" id="option-3" >
+                     
+                     <label for="option-1" class="option option-1">
+                         <span>PATIENT</span>
+                     </label>
+                     <label for="option-2" class="option option-2">
+                          <span>DOCTOR</span>
+                     </label>
+                     <label for="option-3" class="option option-3">
+                         <span>ADMIN</span>
+                    </label>
+     
+                 </div>
+                 
+                <div class="input">
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+
+                <div class="input">
+                    <i class='bx bxs-user' ></i>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                
+                <div class="input">
+                    <i class='bx bxs-envelope' ></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+    
+                <div class="input">
+                    <i class='bx bxs-phone'></i>
+                   <input type="tel" id="phone" placeholder="Phone Number" name="phone">
+               </div>
+               
+               <div class="input">
+                    <i class='bx bxs-lock-alt' ></i> 
+                    <input  class="allpassInput" type="password" name="password" placeholder="Enter Password" required>
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+           
+
+                <div class="input admin-code">
+                    <i class='bx bx-lock'></i>
+                    <input  class="allpassInput" id="admin-code" type="password" name="password" placeholder="Admin Code" >
+                    <i class='bx bx-hide showpass' ></i>
+                </div>
+                    
+                <button type="submit">Signup as Patient</button>
+            </form>
+           
+        </div>
+
+        <div class="esc">
+
+        </div>
+            
+    </div>
+
+    </header>
+
+    <div class="sidenav">
+        <div class="collapse-btn">       
+            <i class='bx bx-menu'></i>
+        </div>
+        <ul class="nav">
+            <a class="booknav active" onclick="showBookpage()" href="patient-appointment.html">
+                <li class="book-nav">
+                     <div class="icon">
+                        <i class='bx bx-calendar-edit' ></i>
+                             <!-- <div class="tooltip">
+                            <span class="tooltiptext">Book Appointment</span>
+                            </div> -->
+                    </div>
+                    <span class="labels">
+                        Book Appointment
+                    </span>
+                </li>
+            </a>
+
+            <a class="myaptnav" onclick="showAptpage();" href="#my-appointments">
+                <li class="book-nav">
+                     <div class="icon">
+                        <i class='bx bx-calendar-check'></i>
+
+                             <!-- <div class="tooltip">
+                            <span class="tooltiptext">Book Appointment</span>
+                            </div> -->
+                    </div>
+                    <span class="labels">
+                        My Appointments
+                    </span>
+                </li>
+            </a>           
+        </ul>
+    </div>
+
+    <section id="book-appointment">
+
+        <div class="container">
+            
+            <div class="progress-bar">
+               <div class="bar">
+                    <div class="line"> </div>
+                    <div class="circles">
+                        <div class="circle active"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div> 
+                    </div>
+                </div> 
+                <div class="labels">
+                    <li>Services</li>
+                    <li>Doctors</li>
+                    <li>Schedule</li>
+                    <li>Confirm</li>  
+                </div>
+            </div>
+
+            <div class="main-content">
+                <form action="POST">
+                  <section id="book-services">
+                    <div class="inputs">
+
+                    </div>
+
+                    <a onclick="showbookDoctors()" href="#book-doctors" class="nextDoctor">NEXT</a>
+                  </section>
+                  
+                  <section id="book-doctors">
+                    <div class="inputs">
+                        
+                    </div>
+
+                    <div class="buttons">
+                        <a onclick="showbookServices()" href="#book-services" class="backservices">BACK</a>
+                        <a onclick="showbookSchedule()" href="#book-schedule" class="nextschedule">NEXT</a>
+                    </div>
+                    
+                 </section> 
+
+                 <section id="book-schedule">
+                    <div class="inputs">
+                        
+                    </div>
+                    <div class="buttons">
+                        <a onclick="showbookDoctors()" href="#book-doctors" class="backDoctor">BACK</a>
+                        <a onclick="showbookConfirmation()" href="#book-confirmation" class="nextconfirm">NEXT</a>
+                    </div>
+                </section>
+                  
+                  <section id="book-confirmation">
+                    <div class="inputs">
+                        
+                    </div>
+                    <div class="buttons">
+                        <a onclick="showbookSchedule()" href="#book-schedule" class="backschedule">BACK</a>
+                        <button type="submit">SUBMIT</button>
+                    </div>
+                  </section>
+
+                </form>
+            </div>
+
+
+            
+        </div>
+    </section>   
+
+    <section id="my-appointments">
+
+        my-appointments
+
+    </section>   
+    
+    <section id="my-profile">
+
+        my-profile
+
+    </section>   
+
+    <script src="js/script.js"></script>
+    <script src="/js/book.js"></script>
+   
+</body>
+</html>

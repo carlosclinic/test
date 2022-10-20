@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+
+    
+    --nav-links:1.6rem;
+    --nav-icons:0rem;
+
+    --fnt-home-h1:6.5rem;
+
+    --swiper-theme-color:#EC673A !important;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins";
+
+}html{
+    scroll-behavior:unset;
+    font-size: 62.5%;
+    
+}body{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff; 
+    min-width: 30em;
+    /* position: relative; */
+
+}header{
+    /* box-shadow: unset;    */
+    background-color: transparent;
+}header .links{
+    display: none;
+
+}header .container{
+    max-width: unset;
+    
+}header .log .logout .logout-btn ul .myprofilenav{
+    display: block;
+
+}header .log .logout .logout-btn{
+    bottom: -6.5em;
+}
+.sidenav{
+    /* position: fixed;
+    left: 0;
+    top: 7em;
+    width: 30em;
+    background-color: #EC673A;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 7em;
+    z-index: 1000;
+
+}.sidenav .nav{
+    /* display: flex;
+    width: 100%;
+    flex-direction: column; */
+
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}.sidenav .nav a{
+    display: flex;  
+    /* height: 3em; */
+    height: 100%;
+}.sidenav .nav a li{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 2em;
+
+}.sidenav .nav a li .icon i{
+    font-size: 2.5rem;
+    font-weight:500;
+    color:#222 ;
+    display: none;
+}
+.sidenav .nav a li span{
+    display: flex;
+    flex: 1;
+    font-size: 1.6rem;
+    font-weight:500;
+    color:#222 ;
+    transition: color 0.3s ease-in;
+
+}.sidenav .nav a:hover span,
+.sidenav .nav a.active span,
+.sidenav .nav a:hover .icon i,
+.sidenav .nav a.active .icon i{
+    color: #EC673A;
+
+}.sidenav .collapse-btn{
+    display: none;
+}.sidenav .collapse-btn i{
+    font-size: 2.5rem;
+}
+
+
+/*---------------------------------- Book Appointment------------------------------------- */
+#book-appointment{
+    min-height:100vh ;
+    padding-top: calc(7vh + 3vh);
+    padding-bottom:5vh;
+    width: 100%;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+   
+}#book-appointment .container{
+/* 
+    background: #EC673A; */
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    max-width: 130em;
+}#book-appointment .container .progress-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    position: relative;
+    padding: 5vh 0;
+     
+}#book-appointment .container .progress-bar progress{
+    width: 100%;
+    height: 2.5em;    
+    accent-color: #EC673A;
+    
+}#book-appointment .container .progress-bar .bar{
+    width: 80%;
+    height: 1em;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F0F4F7;
+    border-radius: 4em;
+    margin-bottom: 1em;
+
+}#book-appointment .container .progress-bar .bar .line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    /* width: 33%; */
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    background-color: #EC673A;
+    border-radius: 4em;
+    transition: width 0.6s ease-in-out;
+
+}#book-appointment .container .progress-bar .bar .circle{
+    
+    height: 3em;
+    width: 3em;
+    background-color: #F0F4F7;
+    border-radius: 50%;
+    transition: background-color 1s ease-in-out;
+}#book-appointment .container .progress-bar .bar .circle.active{
+    
+
+    background-color: #EC673A;
+    
+    
+}#book-appointment .container .progress-bar .bar .circles{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 10;
+    
+}
+#book-appointment .container .progress-bar .labels{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    position: relative;
+
+}#book-appointment .container .main-content{
+    display: flex;
+    width: 100%;
+    flex: 1;
+}#book-appointment .container .main-content form{
+    display: flex;
+    flex: 1;
+}
+#book-appointment .container .main-content form section{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+ 
+}#book-appointment .container .main-content form #book-services{
+    display: flex;
+    min-height: 100%;
+    min-width: 100%;
+}
+#book-appointment .container .main-content form #book-doctors{
+    display: none;
+    min-height: 100%;
+    min-width: 100%;
+}
+#book-appointment .container .main-content form #book-schedule{
+    display: none;
+    min-height: 100%;
+    min-width: 100%;
+}
+#book-appointment .container .main-content form #book-confirmation{
+    display: none;
+    min-height: 100%;
+    min-width: 100%;
+}#book-appointment .container .main-content form section .inputs{
+    display: flex;
+    flex: 1;
+}
+
+
+
+
+
+
+#my-appointments{
+    min-height:100vh ;
+    padding-top: calc(7vh + 3vh);
+    width: 100%;
+    display: none;
+    background-color:#fff;
+   
+}#my-profile{
+    min-height:100vh ;
+    padding-top: calc(7vh + 3vh);
+    width: 100%;
+    display: none;
+    background-color:#fff;
+   
+}
+@media screen and (max-width: 768px){
+    
+    .sidenav{
+        position: fixed;
+        left: 0;
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        height: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(0);
+        flex-direction: row;
+        box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em, rgba(90, 125, 188, 0.05) 0 0.25em 1em; 
+    
+        
+
+    }.sidenav .nav{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        height: 100%;
+ 
+    }.sidenav .nav a{
+         height: 3em;
+         display: flex;
+         flex: 1;
+    }.sidenav .nav a li .icon i{
+        display: flex;
+    }
+    .sidenav .nav a li span{
+         display: none;
+    }
+
+    #book-appointment{
+        padding-bottom:8vh;
+       
+    }
+}
+
