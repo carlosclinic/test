@@ -201,7 +201,7 @@
 }#book-appointment .container .main-content{
     display: flex;
     width: 100%;
-    flex: 1;
+   
     /* background-color: #EC673A; */
 }#book-appointment .container .main-content form{
     display: flex;
