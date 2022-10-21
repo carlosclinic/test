@@ -85,5 +85,3 @@ function showbookConfirmation(){
     bookprogressbar.style.width="99%";
 }
 
-
-console.log(bookprogresO)
