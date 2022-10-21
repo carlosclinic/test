@@ -38,9 +38,9 @@
 
             <div class="logout">
                 <p>James Delos Santos <br><span> Patient</span></p>                          
-                <img onclick="homelogout()" src="./img/dog.jpg" alt="User Profile">
+                <img onclick="homelogout();" src="./img/dog.jpg" alt="User Profile">
 
-                <div  onclick="closehomelogout()" class="esc"> </div>
+                <div  onclick="closehomelogout();" class="esc"> </div>
                 <div class="logout-btn">
                     <ul>
                         <li class="myprofilenav" >
@@ -158,7 +158,7 @@
             <i class='bx bx-menu'></i>
         </div>
         <ul class="nav">
-            <a class="booknav active" onclick="showBookpage()" href="patient-appointment.html">
+            <a class="booknav active" onclick="showBookpage();" href="patient-appointment.html">
                 <li class="book-nav">
                      <div class="icon">
                         <i class='bx bx-calendar-edit' ></i>
@@ -215,7 +215,34 @@
                 <form action="POST">
                   <section id="book-services">
                     <div class="inputs">
-
+                        <li>              
+                            <input type="checkbox" id="service1" name="service1" value="">
+                            <label for="service1">Consultation/Check Up </label>     
+                             
+                        </li>
+                        <li>
+                            <input type="checkbox" id="service2" name="service2" value="">
+                            <label for="service2">Home Visit</label> 
+                        </li>
+                        <li>
+                            <input type="checkbox" id="service3" name="service3" value="">
+                            <label for="service3">Medical Certification</label> 
+                        </li>
+                        <li>
+                            <input type="checkbox" id="service4" name="service4" value="">
+                            <label for="service4">Vaccination</label>    
+                        </li>
+                        <li>
+                            <input type="checkbox" id="service5" name="service5" value="">
+                            <label for="service5">Nevulization</label>    
+                        </li>
+                        <li>
+                            <input type="checkbox" id="service6" name="service6" value="">
+                            <label for="service6">Circumcision</label>    
+                        </li>
+    
+                    
+    
                     </div>
                     <div class="buttons">
                          <a onclick="showbookDoctors();" href="#book-doctors" class="nextDoctor">NEXT</a>
@@ -275,7 +302,7 @@
     </section>   
 
     <script src="js/script.js"></script>
-    <script src="js/book.js"></script>
+    <script src="/js/book.js"></script>
    
 </body>
 </html>
