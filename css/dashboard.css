@@ -119,8 +119,8 @@
 
 /*---------------------------------- Book Appointment------------------------------------- */
 #book-appointment{
-/*     min-height:100vh ; */
-    padding-top: calc(7vh + 3vh);
+    min-height:100vh ;
+    padding-top: calc(7em + 3vh);
  
     width: 100%;
     display: flex;
