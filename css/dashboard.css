@@ -121,7 +121,7 @@
 #book-appointment{
     min-height:100vh ;
     padding-top: calc(7vh + 3vh);
-    padding-bottom:5vh;
+ 
     width: 100%;
     display: flex;
     background-color: #fff;
